@@ -7,9 +7,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
         <script src="js/jquery.fixedheadertable.js"></script>
         <script>
-			$(document).ready(function() {
-				$('.myTable01').fixedHeaderTable({ width: '900', height: '250', footer: true, cloneHeadToFoot: true, altClass: 'odd', themeClass: 'fancyTable', autoShow: true });				
-			});				
+			var delay = (function(){
+			  var timer = 0;
+			  return function(callback, ms){
+				clearTimeout (timer);
+				timer = setTimeout(callback, ms);
+			  };
+			})();		
+			var newParams = { height: '250', footer: false, cloneHeadToFoot: false, altClass: 'odd', themeClass: 'fancyTable', autoShow: true, autoResize: true };
+			$(document).ready(function() {	
+				var windowWidth = $(window).width()-13;
+				console.log(windowWidth)
+				newParams['width'] = ''+windowWidth;
+				$('.myTable01').fixedHeaderTable(newParams);							
+			});	
+			$(window).resize(function() {
+				delay(function(){
+					$('.myTable01').fixedHeaderTable('destroy');
+					var windowWidth = $(window).width()-13;
+					console.log(windowWidth)
+					newParams['width'] = ''+windowWidth;
+					$('.myTable01').fixedHeaderTable(newParams);	
+				}, 300);
+			});			
 		</script>
     </head>
     <body>
