@@ -1,3 +1,5 @@
+## a 'lite' fork of golovko's Fixed-Header-Table
+
 ## Version 1.2.2
  - jquery.fixedheadertable.js
  
