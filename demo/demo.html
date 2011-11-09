@@ -4,7 +4,7 @@
         <title>FixedHeaderTable Test</title>
         <link href="css/defaultTheme.css" rel="stylesheet" media="screen" />
         <link href="css/myTheme.css" rel="stylesheet" media="screen" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <script src="js/jquery.fixedheadertable.js"></script>
         <script>
 			var delay = (function(){
@@ -14,10 +14,9 @@
 				timer = setTimeout(callback, ms);
 			  };
 			})();		
-			var newParams = { height: '250', footer: false, cloneHeadToFoot: false, altClass: 'odd', themeClass: 'fancyTable', autoShow: true, autoResize: true };
+			var newParams = { height: '300', autoShow: true, autoResize: true };
 			$(document).ready(function() {	
 				var windowWidth = $(window).width()-13;
-				console.log(windowWidth)
 				newParams['width'] = ''+windowWidth;
 				$('.myTable01').fixedHeaderTable(newParams);							
 			});	
