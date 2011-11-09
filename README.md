@@ -13,8 +13,4 @@
 
 * width - Number - Default: 100%
 * height - Number - Default: 100%
-* footer - Boolean - Default: false
-* cloneHeadToFoot - Boolean - Default: false
 * autoShow - Boolean - Default: true
-* altClass - String - Default: none
-* themeClass - String - Default: none
