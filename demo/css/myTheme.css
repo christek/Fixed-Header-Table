@@ -51,20 +51,3 @@ div.fht-tbody {
     height: 1px;
 }
 
-.fancyTable {
-	font-size: 11px;
-}	
-
-.fancyTable td, .fancyTable th {
-	border: 1px solid #778899;
-	padding: 1px;
-}
-
-.fancyTable {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.fancyTable tbody tr td {
-	font-size: 11px;
-}
-
