@@ -13,21 +13,22 @@
 				clearTimeout (timer);
 				timer = setTimeout(callback, ms);
 			  };
-			})();		
-			var newParams = { height: '300', autoShow: true, autoResize: true };
-			$(document).ready(function() {	
-				var windowWidth = $(window).width()-13;
-				newParams['width'] = ''+windowWidth;
-				$('.myTable01').fixedHeaderTable(newParams);							
-			});	
-			$(window).resize(function() {
+			})();	
+			function resetTableLayout() {
 				delay(function(){
 					$('.myTable01').fixedHeaderTable('destroy');
 					var windowWidth = $(window).width()-13;
 					console.log(windowWidth)
 					newParams['width'] = ''+windowWidth;
 					$('.myTable01').fixedHeaderTable(newParams);	
-				}, 300);
+				}, 300);			
+			}
+			var newParams = { height: '300', autoShow: true, autoResize: true };
+			$(document).ready(function() {	
+				resetTableLayout();						
+			});	
+			$(window).resize(function() {
+				resetTableLayout();
 			});			
 		</script>
     </head>
